@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @StateObject var restaurantsViewModel = RestaurantsViewModel()
     
     var body: some View {
         TabView {
@@ -20,6 +20,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("My Favorites", systemImage: "star.fill")
                 }
+        }.onAppear{
+            restaurantsViewModel.fetch()
         }
     }
     
