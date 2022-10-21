@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E08EE012902191500FF9992 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08EE002902191500FF9992 /* SwiftColor.swift */; };
+		1E4E45582902E35300DBA7B5 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E45572902E35300DBA7B5 /* FavoritesView.swift */; };
+		1E4E455A2902E44600DBA7B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E45592902E44600DBA7B5 /* HomeView.swift */; };
 		1ED4F62B2901D4B9000573D6 /* MycuisineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F62A2901D4B9000573D6 /* MycuisineApp.swift */; };
 		1ED4F62D2901D4B9000573D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F62C2901D4B9000573D6 /* ContentView.swift */; };
 		1ED4F62F2901D4BB000573D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED4F62E2901D4BB000573D6 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		1E08EE002902191500FF9992 /* SwiftColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColor.swift; sourceTree = "<group>"; };
+		1E4E45572902E35300DBA7B5 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		1E4E45592902E44600DBA7B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1ED4F6272901D4B9000573D6 /* Mycuisine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mycuisine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4F62A2901D4B9000573D6 /* MycuisineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycuisineApp.swift; sourceTree = "<group>"; };
 		1ED4F62C2901D4B9000573D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1E4E45562902E33900DBA7B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E4E45572902E35300DBA7B5 /* FavoritesView.swift */,
+				1E4E45592902E44600DBA7B5 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1ED4F61E2901D4B9000573D6 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 		1ED4F6292901D4B9000573D6 /* Mycuisine */ = {
 			isa = PBXGroup;
 			children = (
+				1E4E45562902E33900DBA7B5 /* Views */,
 				1ED4F62A2901D4B9000573D6 /* MycuisineApp.swift */,
 				1ED4F62C2901D4B9000573D6 /* ContentView.swift */,
 				1ED4F62E2901D4BB000573D6 /* Assets.xcassets */,
@@ -268,8 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4E45582902E35300DBA7B5 /* FavoritesView.swift in Sources */,
 				1ED4F62D2901D4B9000573D6 /* ContentView.swift in Sources */,
 				1ED4F62B2901D4B9000573D6 /* MycuisineApp.swift in Sources */,
+				1E4E455A2902E44600DBA7B5 /* HomeView.swift in Sources */,
 				1E08EE012902191500FF9992 /* SwiftColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
