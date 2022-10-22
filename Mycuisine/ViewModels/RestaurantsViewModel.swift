@@ -9,6 +9,7 @@ import Foundation
 
 class RestaurantsViewModel: ObservableObject {
     @Published var restaurants: [Restaurant] = []
+    
     func fetch(){
         guard let url = URL(string: "https://api.geoapify.com/v2/places?categories=catering.restaurant&filter=place:512ce77424b23d21c059157edac1b6944440f00101f901a575330000000000c00208920305506f72746f&limit=20&apiKey=cbd9b957e85e49eeae719c0fd9d43d7d") else {
             return
@@ -18,30 +19,19 @@ class RestaurantsViewModel: ObservableObject {
             guard let data = data, error == nil else {
                 return
             }
+            let str = String(decoding: data, as: UTF8.self)
+            let d = str.data(using: .utf8)!
             
             do {
-                let str = String(decoding: data, as: UTF8.self)
-                let d = str.data(using: .utf8)!
+                let unformattedData = try JSONDecoder().decode(ApiUnformatted.self, from: data)
                 
-                do {
-                    if let jsonArray = try JSONSerialization.jsonObject(with: d, options : .allowFragments) as? Dictionary<String,Any>
-                    {
-                       print(jsonArray) // use the json here
-                        
-                    } else {
-                        print("bad json")
+                DispatchQueue.main.async {
+                    for restaurant in unformattedData.features {
+                        self?.restaurants.append(Restaurant(name: restaurant.properties.name, street: restaurant.properties.street, city: restaurant.properties.city, county: restaurant.properties.county, country_code: restaurant.properties.country_code, lon: restaurant.properties.lon, lat: restaurant.properties.lat))
                     }
-                } catch let error as NSError {
-                    print(error)
                 }
                 
-                
-                let restaurants = try JSONDecoder().decode([Restaurant].self, from: data)
-                 DispatchQueue.main.async {
-                     self?.restaurants = restaurants
-                 }
-            }
-            catch {
+            } catch {
                 print(error)
             }
         }
@@ -50,5 +40,5 @@ class RestaurantsViewModel: ObservableObject {
     }
     
     
-
+    
 }

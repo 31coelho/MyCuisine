@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E08EE012902191500FF9992 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E08EE002902191500FF9992 /* SwiftColor.swift */; };
+		1E4E1876290499EA004CFBD9 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E1875290499EA004CFBD9 /* Encodable.swift */; };
 		1E4E45582902E35300DBA7B5 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E45572902E35300DBA7B5 /* FavoritesView.swift */; };
 		1E4E455A2902E44600DBA7B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E45592902E44600DBA7B5 /* HomeView.swift */; };
 		1E4E455D2903554600DBA7B5 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E455C2903554600DBA7B5 /* RestaurantsViewModel.swift */; };
@@ -19,6 +20,7 @@
 		1ED4F63C2901D4BB000573D6 /* MycuisineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F63B2901D4BB000573D6 /* MycuisineTests.swift */; };
 		1ED4F6462901D4BB000573D6 /* MycuisineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F6452901D4BB000573D6 /* MycuisineUITests.swift */; };
 		1ED4F6482901D4BB000573D6 /* MycuisineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4F6472901D4BB000573D6 /* MycuisineUITestsLaunchTests.swift */; };
+		1EFD291B2904635E002E11C1 /* ApiUnformatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD291A2904635E002E11C1 /* ApiUnformatted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		1E08EE002902191500FF9992 /* SwiftColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColor.swift; sourceTree = "<group>"; };
+		1E4E1875290499EA004CFBD9 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		1E4E45572902E35300DBA7B5 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		1E4E45592902E44600DBA7B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1E4E455C2903554600DBA7B5 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		1ED4F6412901D4BB000573D6 /* MycuisineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MycuisineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED4F6452901D4BB000573D6 /* MycuisineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycuisineUITests.swift; sourceTree = "<group>"; };
 		1ED4F6472901D4BB000573D6 /* MycuisineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycuisineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1EFD291A2904635E002E11C1 /* ApiUnformatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUnformatted.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				1E08EE002902191500FF9992 /* SwiftColor.swift */,
+				1E4E1875290499EA004CFBD9 /* Encodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1E4E455F2903566600DBA7B5 /* Restaurant.swift */,
+				1EFD291A2904635E002E11C1 /* ApiUnformatted.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4E45582902E35300DBA7B5 /* FavoritesView.swift in Sources */,
+				1E4E1876290499EA004CFBD9 /* Encodable.swift in Sources */,
 				1E4E455D2903554600DBA7B5 /* RestaurantsViewModel.swift in Sources */,
+				1EFD291B2904635E002E11C1 /* ApiUnformatted.swift in Sources */,
 				1ED4F62D2901D4B9000573D6 /* ContentView.swift in Sources */,
 				1E4E45602903566600DBA7B5 /* Restaurant.swift in Sources */,
 				1ED4F62B2901D4B9000573D6 /* MycuisineApp.swift in Sources */,

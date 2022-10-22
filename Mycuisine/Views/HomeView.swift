@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var username: String = ""
     @State private var searchVisibility: Bool = false
-   
+    @StateObject private var viewModel: RestaurantsViewModel = RestaurantsViewModel()
     
     var body: some View {
         VStack(alignment: .trailing) {
@@ -42,10 +42,10 @@ struct HomeView: View {
                 Text("Daily Sugestions").font(.system(size: 20))
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(spacing: 20) {
-                        ForEach(0..<10) {
-                            Text("Item \($0)")
+                        ForEach(viewModel.restaurants, id: \.self) { restaurant in
+                            Text("\(restaurant.name)")
                                 .foregroundColor(.white)
-                                .font(.largeTitle)
+                                .font(.system(size: 15))
                                 .frame(width: 150, height: 150)
                                 .background(.red)
                                 .cornerRadius(16)
@@ -71,7 +71,11 @@ struct HomeView: View {
             }.padding(.bottom)
             Spacer()
             
-        }.padding()
+        }
+        .padding()
+        .onAppear {
+            viewModel.fetch()
+        }
         
     }
 }

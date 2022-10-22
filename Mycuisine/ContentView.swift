@@ -20,8 +20,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("My Favorites", systemImage: "star.fill")
                 }
-        }.onAppear{
-            restaurantsViewModel.fetch()
         }
     }
     

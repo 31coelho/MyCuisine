@@ -11,11 +11,9 @@ import Foundation
 struct Restaurant: Hashable, Codable {
     let name: String
     let street: String
-    let neighbourhood: String
     let city: String
-    let country: String
-    let postcode: String
+    let county: String
+    let country_code: String
     let lon: Float
     let lat: Float
-    let openingHours: String
 }
