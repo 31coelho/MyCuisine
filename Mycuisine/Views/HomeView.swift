@@ -43,12 +43,7 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(spacing: 20) {
                         ForEach(viewModel.restaurants, id: \.self) { restaurant in
-                            Text("\(restaurant.name)")
-                                .foregroundColor(.white)
-                                .font(.system(size: 15))
-                                .frame(width: 150, height: 150)
-                                .background(.red)
-                                .cornerRadius(16)
+                            MiniRestaurantView(name: restaurant.name)
                         }
                     }
                 }
